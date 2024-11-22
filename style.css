@@ -1285,4 +1285,15 @@ body {
 }
 
 
+.below-nav {
+    text-align: center;
+    font-size: 0.8em;
+    color: #fff; /* Adjust the text color to match your theme */
+    background-color: #000; /* Adjust the background color if needed */
+    padding: 10px 0;
+}
+
+ 
+
+
  
