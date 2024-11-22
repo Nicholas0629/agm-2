@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In - Cinema Booking</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+          background-image: url(img/cinema_bg.jpg);
+            background-size: cover;  /* Make the image cover the entire screen */
+            background-position: center;  /* Center the image */
+            background-attachment: fixed;  /* Make sure the image stays fixed while scrolling */
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #f5a5d2; /* Soft Pink */
+        }
+
+        input[type="text"], input[type="email"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #333;
+            border-radius: 5px;
+            font-size: 1rem;
+            background-color: #333;
+            color: white;
+        }
+
+        input[type="submit"], .btn-submit {
+            background-color: #f5a5d2; /* Pink */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            width: 100%;
+        }
+
+        input[type="submit"]:hover, .btn-submit:hover {
+            background-color: #f16b92; /* Darker pink */
+        }
+
+        /* Containers */
+        .login-container {
+            background-color: rgba(17, 17, 17, 0.8);  /* Dark background for the form with opacity */
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+            width: 320px;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        .action-buttons {
+            text-align: center;
+        }
+
+        /* Links */
+        .signup-link {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .signup-link a {
+            color: #f5a5d2;
+            text-decoration: none;
+        }
+
+        .signup-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        <h2>Sign In</h2>
+        <form action="signin_action.php" method="POST">
+            <div class="input-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            </div>
+
+            <div class="action-buttons">
+                <button type="submit" class="btn-submit">Sign In</button>
+            </div>
+            
+            <div class="signup-link">
+                <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>

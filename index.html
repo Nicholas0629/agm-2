@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinema Booking Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Swinburne Cinema</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            
+            <!-- Dropdown Menu for Tickets -->
+            <div class="dropdown">
+        
+                <div class="dropdown-content">
+                    <a href="now-showing.html">Now Showing</a>
+                    <a href="comingsoon.html">Coming Soon</a>
+                    <a href="top-picks.html">Top Picks</a>
+                </div>
+            </div>
+            
+            <a href="shop.html">Shop</a>
+            <a href="food&drinks.html">Food & Beverages</a>
+            <a href="events-gallery.html">Events</a>
+            <a href="experience.html">Experience</a>
+            <li><a href="feedback.html" id="feedback-link">Feedback</a></li> <!-- Feedback Link -->
+            <a href="signin.html" class="sign-in-btn">Sign In</a>
+        </nav>
+    </header>
+    
+
+    <section id="slideshow">
+        <div class="slideshow-container">
+          <!-- Slider Section -->
+<div class="slide-container">
+    <!-- Slide 1 -->
+    <div class="slide fade">
+        <img src="img/HighForces-1500x500px-(H).jpg" alt="Movie 1">
+        <div class="overlay">
+            <h2>High Forces</h2>
+            <button class="btn-trailer" onclick="showTrailer('trailers/highforces.mp4')">Watch Trailer</button>
+            <button class="btn-ticket">Buy Ticket</button>
+        </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="slide fade">
+        <img src="img/MastercardRM5WebBanner_1.jpg" alt="Movie 2">
+        <div class="overlay">
+            <h2>Mastercard Deal 2</h2>
+        </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="slide fade">
+        <img src="img/transformers-one-website.jpg" alt="Movie 3">
+        <div class="overlay">
+            <h2>Transformers One</h2>
+            <button class="btn-trailer" onclick="showTrailer('trailers/transformers.mp4')">Watch Trailer</button>
+            <button class="btn-ticket">Buy Ticket</button>
+        </div>
+    </div>
+</div>
+     <!-- Slide 4 -->
+        <div class="slide fade">
+        <img src="img/redone.jpg" alt="Movie 4">
+        <div class="overlay">
+            <h2>Red One</h2>
+            <button class="btn-trailer" onclick="showTrailer('trailers/redonemp4.mp4')">Watch Trailer</button>
+            <button class="btn-ticket">Buy Ticket</button>
+        </div>
+    </div>
+
+     <!-- Slide 5 -->
+     <div class="slide fade">
+        <img src="img/LAFF.jpg" alt="Movie 3">
+        <div class="overlay">
+            <h2>Festival</h2>
+        </div>
+    </div>
+
+     <!-- Slide 6 -->
+     <div class="slide fade">
+        <img src="img/harry-potter-1500.jpg" alt="Movie 3">
+        <div class="overlay">
+            <h2>Harry Potter</h2>
+            <button class="btn-trailer" onclick="showTrailer('trailers/HarryPottermp4.mp4')">Watch Trailer</button>
+            <button class="btn-ticket">Buy Ticket</button>
+        </div>
+    </div>
+
+     <!-- Slide 7 -->
+     <div class="slide fade">
+        <img src="img/venom.jpg" alt="Movie 3">
+        <div class="overlay">
+            <h2>Venom The Last Dance</h2>
+            <button class="btn-trailer" onclick="showTrailer('trailers/venommp4.mp4')">Watch Trailer</button>
+            <button class="btn-ticket">Buy Ticket</button>
+        </div>
+    </div>
+
+    
+
+<!-- Trailer Modal -->
+<div id="trailerModal" class="trailer-modal">
+    <div class="modal-content">
+        <video id="localTrailer" controls autoplay>
+            <source id="videoSource" src="" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <span class="close-modal" onclick="closeTrailer()">&times;</span>
+    </div>
+</div>
+
+
+            <!-- Navigation buttons -->
+            <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+            <a class="next" onclick="changeSlide(1)">&#10095;</a>
+        </div>
+    </section>
+
+    <section id="showtimes">
+        <div class="showtimes-header">
+            <h2>Showtimes</h2>
+            <nav class="showtime-nav">
+                <a href="now-showing.html">Now Showing</a>
+                <a href="comingsoon.html">Coming Soon</a>
+            </nav>
+        </div>
+    </section>
+    
+
+
+    <section id="movie-container">
+        <h2>Upcoming Movies</h2>
+        <div class="movie-carousel">
+            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+            <div class="movie-slides">
+                <!-- Movie Cards -->
+                <div class="movie-card">
+                    <img src="img/240218_Moana2_big.webp" alt="Movie 1">
+                    <div class="details">
+                        <h3>Moana 2</h3>
+                        <p>Category: Animation</p>
+                        <p>Time: 2h</p>
+                        <button class="btn-buy">Buy Ticket</button>
+                    </div>
+                </div>
+                <div class="movie-card">
+                    <img src="img/240321_TheWildRobot_big.webp" alt="Movie 2">
+                    <div class="details">
+                        <h3>The Wild Robot</h3>
+                        <p>Category: Animation</p>
+                        <p>Time: 1 hr 41 mins</p>
+                        <button class="btn-buy">Buy Ticket</button>
+                    </div>
+                </div>
+                <div class="movie-card">
+                    <img src="img/240403_JokerFolieàDeux_big (1).webp" alt="Movie 3">
+                    <div class="details">
+                        <h3>Joker</h3>
+                        <p>Category: Action Drama</p>
+                        <p>Time: 2 hr 18 mins</p>
+                        <button class="btn-buy">Buy Ticket</button>
+                    </div>
+                </div>
+                <div class="movie-card">
+                    <img src="img/240412_TransformersOne_big.webp" alt="Movie 4">
+                    <div class="details">
+                        <h3>Transformers One</h3>
+                        <p>Category: Animation</p>
+                        <p>Time: 1 hr 44 mins</p>
+                        <button class="btn-buy">Buy Ticket</button>
+                    </div>
+                </div>
+                <div class="movie-card">    
+                    <img src="img/240625_RedOne_big.webp" alt="Movie 5">
+                    <div class="details">
+                        <h3>Red One</h3>
+                        <p>Category: Action</p>
+                        <p>Time: 2 hr 4 mins</p>
+                        <button class="btn-buy">Buy Ticket</button>
+                    </div>
+                </div>
+                <div class="movie-card">
+                    <img src="img/240923_PandaPlan_big.webp" alt="Movie 6">
+                    <div class="details">
+                        <h3>Panda Plan</h3>
+                        <p>Category: Romance</p>
+                        <p>Time: 1 hr 39 mins</p>
+                        <button class="btn-buy">Buy Ticket</button>
+                    </div>
+                </div>
+                <div class="movie-card">
+                    <img src="img/241007_LoveLies_big.webp" alt="Movie 7">
+                    <div class="details">
+                        <h3>Love Lies</h3>
+                        <p>Category: Thriller</p>
+                        <p>Time: 1hr 55 mins</p>
+                        <button class="btn-buy">Buy Ticket</button>
+                    </div>
+                </div>
+                <div class="movie-card">
+                    <img src="img/241028_TigerWolfRabbit_big.webp" alt="Movie 8">
+                    <div class="details">
+                        <h3>Tiger Wolf Rabbit</h3>
+                        <p>Category: Adventure/Action</p>
+                        <p>Time: 2hr 36 mins</p>
+                        <button class="btn-buy">Buy Ticket</button>
+                    </div>
+                </div>
+                <div class="movie-card">
+                    <img src="img/241014_MyHeroAcademiaYou'reNext_big.webp" alt="Movie 9">
+                    <div class="details">
+                        <h3>My Hero Academia: You're Next</h3>
+                        <p>Category: Animation</p>
+                        <p>Time: N/A</p>
+                        <button class="btn-buy">Buy Ticket</button>
+                    </div>
+                </div>
+                <div class="movie-card">
+                    <img src="img/241014_Wonderland_big.jpg" alt="Movie 10">
+                    <div class="details">
+                        <h3>Wonderland</h3>
+                        <p>Category: Drama</p>
+                        <p>Time: 2hr 05 min</p>
+                        <button class="btn-buy">Buy Ticket</button>
+                    </div>
+                </div>
+                <div class="movie-card">
+                    <img src="img/241021_Heretic_big.webp" alt="Movie 11">
+                    <div class="details">
+                        <h3>Heretic</h3>
+                        <p>Category: Horror</p>
+                        <p>Time: N/A</p>
+                        <button class="btn-buy">Buy Ticket</button>
+                    </div>
+                </div>
+                <div class="movie-card">
+                    <img src="img/241021_StandByMe_big.webp" alt="Movie 12">
+                    <div class="details">
+                        <h3>Stand By Me</h3>
+                        <p>Category: Drama</p>
+                        <p>Time: 2 hr 5 mins</p>
+                        <button class="btn-buy">Buy Ticket</button>
+                    </div>
+                </div>
+            </div>
+            <button class="next" onclick="moveSlide(1)">&#10095;</button>
+        </div>
+    </section>
+
+    <section class="promotions-menu">
+        <div class="promo-item active" onclick="loadPromotions('all')">
+            <img src="img/all.png" alt="All Icon">
+            <p>All</p>
+        </div>
+        <div class="promo-item" onclick="loadPromotions('movie-perks')">
+            <img src="img/theater.png" alt="Movie Perks Icon">
+            <p>Movie Perks</p>
+        </div>
+        <div class="promo-item" onclick="loadPromotions('fb')">
+            <img src="img/fast-food.png" alt="Food & Beverages Icon">
+            <p>F&B</p>
+        </div>
+        <div class="promo-item" onclick="loadPromotions('event')">
+            <img src="img/red-carpet.png" alt="Event Icon">
+            <p>Event</p>
+        </div>
+        <div class="promo-item" onclick="loadPromotions('merchandise')">
+            <img src="img/merchandise.png" alt="Merchandise Icon">
+            <p>Merchandise</p>
+        </div>
+        <div class="promo-item" onclick="loadPromotions('hall-booking')">
+            <img src="img/cinema.png" alt="Hall Booking Icon">
+            <p>Hall Booking</p>
+        </div>
+    </section>
+
+    <!-- Promotion content grid -->
+    <section id="promotion-content" class="promotion-grid">
+        <!-- This will be dynamically populated by JavaScript -->
+    </section>
+
+    <div class="above-footer">
+        <!-- You can insert your sentence here -->
+        <p>Disclaimer: This website is created for education and non-commercial use 
+            only. It is an assignment for completion of unit, DBI211 Fundamentals of Web 
+            Technology based on the Foundation (IT/Multimedia) course from Swinburne 
+            University of Technology Sarawak Campus..</p>
+    </div>
+
+    
+   
+    
+    <footer>
+        <div class="footer-container">
+            <!-- Links and Menu -->
+            <div class="footer-links">
+                <ul>
+                    <li><a href="bookhall.html">Book A Hall</a></li>
+                    <li><a href="experience.html">Experiences</a></li>
+                </ul>
+            </div>
+
+            <!-- Promotion and Contact Information -->
+            <div class="footer-promo">
+                <img src="img/footerpic.jpg" alt="Promotion" class="promo-image">
+                <div class="company-info">
+                    <p><strong>Swinburne Cinema</strong><br></p>
+                    <p>Q5B, Kuching, Sarawak,<br>93350 Kuching, Sarawak, Malaysia</p>
+                    <p>How do I give feedback?</p>
+                    <p>How do I provide feedback to SSC?</p>
+                    <button class="feedback-btn" onclick="openFeedbackPage()">Give Feedback</button>
+                </div>
+            </div>
+
+            <!-- Social Media Links -->
+            <div class="social-media">
+                <p>Follow Us On</p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/swinburnecinemaofficial?igsh=MWZ4YnpkaDl2djJpbw==" target="_blank"><img src="img/facebook-f.svg" alt="Facebook"></a>
+                    <a href="https://www.instagram.com/swinburnecinemaofficial?igsh=MWZ4YnpkaDl2djJpbw==" target="_blank"><img src="img/instagram.svg" alt="Instagram"></a>
+                </div>
+                <p class="footer-bottom-text">
+                    © Copyright 2024 Swinburne Screen Cinemas Sdn Bhd. All Rights Reserved
+                </p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="function.js"></script>
+</body>
+</html>
+

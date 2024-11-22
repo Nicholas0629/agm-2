@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a hall</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Swinburne Cinema</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            
+            <!-- Dropdown Menu for Tickets -->
+            <div class="dropdown">
+               
+                <div class="dropdown-content">
+                    <a href="now-showing.html">Now Showing</a>
+                    <a href="coming-soon.html">Coming Soon</a>
+                    <a href="top-picks.html">Top Picks</a>
+                </div>
+            </div>
+            
+            <a href="shop.html">Shop</a>
+            <a href="food.html">Food & Beverages</a>
+
+        <div class="events-dropdown">
+            <a href="" class="events-drop-btn">Events</a>
+            <div class="events-dropdown-content">
+                <a href="events-gallery.html">Events available</a>
+                <a href="bookhall.html">Book a hall</a>
+            </div>
+        </div>
+            <a href="experience.html">Experience</a>
+        </nav>
+    </header>
+
+    <div class="form-container">
+        <form>
+            <label for="name">Name *</label>
+            <input type="text" id="name" name="name" required>
+    
+            <label for="contact">Contact Number *</label>
+            <input type="text" id="contact" name="contact" required>
+    
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" required>
+    
+            <label for="subject">Subject *</label>
+            <input type="text" id="subject" name="subject" required>
+    
+            <label for="company">Company</label>
+            <input type="text" id="company" name="company">
+    
+            <label for="nature">Nature of Event *</label>
+            <select id="nature" name="nature" required>
+                <option value="Birthday">Birthday</option>
+                <option value="Others">Others</option>
+            </select>
+    
+            <label for="event-date">Event Date *</label>
+            <input type="date" id="event-date" name="event-date" required>
+    
+            <label for="num-people">Number of People *</label>
+            <input type="number" id="num-people" name="num-people" required>
+    
+            <label for="location">Preferred Location *</label>
+            <select id="location" name="location" required>
+                <option value="Swinburne Cinema">Swinburne CInema</option>
+                <!-- Add other options here if needed -->
+            </select>
+    
+            <label for="hall">Preferred Experience Hall *</label>
+            <select id="hall" name="hall" required>
+                <option value="Premiere">Premiere</option>
+                <!-- Add other options here if needed -->
+            </select>
+    
+            <label for="tax-id">Tax ID No ("TIN") / Identification No. *</label>
+            <input type="text" id="tax-id" name="tax-id" required>
+    
+            <label for="business-reg">Business Registration No. (New)</label>
+            <input type="text" id="business-reg" name="business-reg">
+    
+            <label for="e-invoice-email">E-Invoice Email Address *</label>
+            <input type="email" id="e-invoice-email" name="e-invoice-email" required>
+    
+            <label for="e-invoice-address">E-Invoice Address *</label>
+            <input type="text" id="e-invoice-address" name="e-invoice-address" required>
+    
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Cinema Booking Website. All rights reserved.</p>
+        <div class="socials">
+            <a href="#">Facebook</a> | <a href="#">Twitter</a> | <a href="#">Instagram</a>
+        </div>
+    </footer>
+
+    <script src="function.js"></script>
+</body>
+</html>
